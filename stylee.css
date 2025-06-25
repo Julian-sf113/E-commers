@@ -1,0 +1,296 @@
+/* Aquí elimino todos los márgenes y rellenos por defecto y uso border-box para facilitar el cálculo de tamaños */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Defino la fuente principal, el color del texto y el fondo general del sitio */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Diseño el header con fondo oscuro, padding y sombra */
+.header {
+    background-color: #2c3e50;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Coloco el logo alineado a la izquierda con margen */
+.header__logo {
+    float: left;
+    margin-left: 50px;
+    margin-top: 5px;
+}
+
+/* Hago el logo redondo, con borde claro y ajustado */
+.header__img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ecf0f1;
+}
+
+/* Alineo el menú de navegación a la derecha con espacio */
+.header__nav {
+    float: right;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+/* Estilo para los enlaces del header: sin subrayado, mayúsculas y animación de color */
+.header__a {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Cuando paso el mouse, cambio el color del enlace a azul */
+.header__a:hover {
+    color: #3498db;
+}
+
+/* Aplico clearfix para evitar que los elementos flotantes salgan del header */
+.header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Aquí centro el contenedor principal, le doy un ancho máximo y separo los contenidos */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+/* Cada ítem del container será una tarjeta con sombra y animación */
+.container__item {
+    width: 300px;
+    height: 450px;
+    float: left;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Cuando paso el mouse sobre una tarjeta, se eleva ligeramente */
+.container__item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* Contenedor de la imagen del producto */
+.item {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Ajusto la imagen al tamaño del contenedor */
+.container__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Al hacer hover, hago un zoom ligero en la imagen */
+.container__item:hover .container__img {
+    transform: scale(1.05);
+}
+
+/* Aquí va la descripción de cada producto centrada */
+.Container_descripcion {
+    padding: 25px 20px;
+    text-align: center;
+    height: 200px;
+    position: relative;
+}
+
+/* Título del producto: tamaño medio y negrita */
+.Container_descripcion h2 {
+    font-size: 20px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+/* Precio en rojo y en negrita para que llame la atención */
+.container__precio {
+    font-size: 24px;
+    color: #e74c3c;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* Botón de acción, centrado y animado, con estilo moderno */
+.container__boton {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Cuando paso el mouse, el botón se eleva y cambia el fondo */
+.container__boton:hover {
+    background: linear-gradient(135deg, #2980b9, #1f5d8c);
+    transform: translateX(-50%) translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+
+/* Aplico clearfix para que el container encierre bien los ítems flotantes */
+.container:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Diseño el footer con fondo oscuro y texto claro */
+.footer {
+    background-color: #34495e;
+    color: #ecf0f1;
+    padding: 50px 0 20px;
+    margin-top: 60px;
+    clear: both;
+}
+
+/* Contenedor del footer centrado y con padding */
+.footer__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+/* Cada sección del footer ocupa el 25% del ancho */
+.footer__seccion {
+    width: 25%;
+    float: left;
+    padding: 0 20px;
+}
+
+/* Título de cada sección en azul y mayúsculas */
+.footer__titulo {
+    font-size: 20px;
+    color: #3498db;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Quito los puntos de las listas */
+.footer__lista {
+    list-style: none;
+}
+
+/* Espacio entre los ítems de la lista */
+.footer__item {
+    margin-bottom: 10px;
+}
+
+/* Estilo para los enlaces del footer */
+.footer__enlace {
+    color: #bdc3c7;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+/* Cambio de color al pasar el mouse sobre un enlace */
+.footer__enlace:hover {
+    color: #3498db;
+}
+
+/* Estilo del texto de contacto */
+.footer__contacto {
+    font-size: 14px;
+}
+
+/* Color y separación del texto de contacto */
+.footer__texto {
+    margin-bottom: 8px;
+    color: #bdc3c7;
+}
+
+/* Clearfix para el footer */
+.footer__container:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer inferior con línea superior, texto centrado y separación */
+.footer__inferior {
+    border-top: 1px solid #4a5f7a;
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Copyright alineado a la izquierda */
+.footer__copyright {
+    float: left;
+    margin-left: 20px;
+    font-size: 14px;
+    color: #95a5a6;
+}
+
+/* Contenedor de los métodos de pago, alineado a la derecha */
+.footer__metodos-pago {
+    float: right;
+    margin-right: 20px;
+}
+
+/* Estilo visual para cada método de pago */
+.footer__pago {
+    display: inline-block;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 5px 12px;
+    margin: 0 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Clearfix para el footer inferior */
+.footer__inferior:after {
+    content: "";
+    display: table;
+    clear: both;
+}

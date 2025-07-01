@@ -40,9 +40,47 @@ body {
 
 /* Alineo el menú de navegación a la derecha con espacio */
 .header__nav {
-    float: right;
     margin-right: 50px;
     margin-top: 20px;
+    display: inline-block;
+}
+
+.header__carrito {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  display: inline-block;
+  right: 0;
+  margin-top: 13px;
+}
+.header__icon{
+  
+  font-size: 35px;
+  color: white;
+}
+
+.header__articulos{
+  width: 20px;
+  height: 20px;
+  background-color: #e74c3c;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+}
+.header__cantidad {
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  color:white;
+
+}
+
+.header__navegacion{
+  position: absolute;
+  right: 0;
+  margin-right: 50px;
 }
 
 /* Estilo para los enlaces del header: sin subrayado, mayúsculas y animación de color */
